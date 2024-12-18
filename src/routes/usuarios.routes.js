@@ -9,3 +9,5 @@ router.route("/usuarios").get();
 router.route("/registro").post(validarUsuario, consultaAgregarUsuario);
 router.route("/login").post();
 router.route("/usuario:id").get();
+
+export default router;

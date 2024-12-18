@@ -4,6 +4,7 @@ import * as dotenv from "dotenv";
 import morgan from "morgan";
 import path from "path";
 import './src/database/dbConnection';
+import usuarioRouter from "./src/routes/usuarios.routes";
 
 dotenv.config();
 
@@ -21,3 +22,4 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.use("/auth", usuarioRouter);
