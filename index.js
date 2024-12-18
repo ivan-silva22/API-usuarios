@@ -1,7 +1,11 @@
 import express from "express";
 import cors from "cors";
+import * as dotenv from "dotenv";
 import morgan from "morgan";
 import path from "path";
+import './src/database/dbConnection';
+
+dotenv.config();
 
 const app = express();
 
